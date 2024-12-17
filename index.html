@@ -1,15 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Hub</title>
+    <title>Login & Registration</title>
+    <link href="./src/index.css" rel="stylesheet" />
   </head>
-  <body class="bg-base-200">
-    <div class="container mx-auto p-4">
-      <h1 class="text-3xl font-bold text-center">Welcome to Social Hub</h1>
+  <body class="bg-gradient-to-r from-blue-600 to-purple-600 min-h-screen flex items-center justify-center">
+    <!-- Container -->
+    <div class="w-full max-w-3xl mx-4 bg-white rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <!-- Left Side: Branding or Illustration -->
+      <div class="hidden md:flex flex-col justify-center items-center bg-blue-500 text-white px-6">
+        <h1 class="text-3xl font-bold mb-4">Welcome Back!</h1>
+        <p class="text-lg">Sign in or create an account to continue.</p>
+        <img src="./src/assets/lock.png" alt="Login Illustration" class="mt-6 mb-6 rounded-lg shadow-md" />
+      </div>
+
+      <!-- Right Side: Forms -->
+      <div class="p-6 md:p-8">
+        <!-- Tabs -->
+        <div class="flex justify-center mb-6">
+          <button id="login-tab" class="tab-button active">Login</button>
+          <button id="register-tab" class="tab-button">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="space-y-6">
+          <h2 class="text-2xl font-semibold text-center text-gray-800">Login</h2>
+          <div>
+            <label for="login-email" class="block text-gray-600 mb-1">Email</label>
+            <input
+              type="email"
+              id="login-email"
+              placeholder="Enter your email"
+              class="input-field"
+              required
+            />
+          </div>
+          <div>
+            <label for="login-password" class="block text-gray-600 mb-1">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Enter your password"
+              class="input-field"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+
+        <!-- Registration Form -->
+        <form id="register-form" class="hidden space-y-6">
+          <h2 class="text-2xl font-semibold text-center text-gray-800">Register</h2>
+          <div>
+            <label for="register-username" class="block text-gray-600 mb-1">Username</label>
+            <input
+              type="text"
+              id="register-username"
+              placeholder="Choose a username"
+              class="input-field"
+              required
+            />
+          </div>
+          <div>
+            <label for="register-email" class="block text-gray-600 mb-1">Email</label>
+            <input
+              type="email"
+              id="register-email"
+              placeholder="Enter your email"
+              class="input-field"
+              required
+            />
+          </div>
+          <div>
+            <label for="register-password" class="block text-gray-600 mb-1">Password</label>
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Choose a password"
+              class="input-field"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-success">Register</button>
+        </form>
+      </div>
     </div>
-    <script type="module" src="/main.js"></script>
+
+    <!-- External JS -->
+    <script type="module" src="./src/js/login.js"></script>
   </body>
 </html>
